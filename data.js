@@ -25,7 +25,7 @@ const menuArray = [
 var totalPrice = 0;
 
 document.addEventListener('click', function evo(e){
-    if(e.target.dataset.id &&  document.getElementById('onWay').classList.includes('hidden') === true){
+    if(e.target.dataset.id &&  document.getElementById('onWay').classList.includes('hidden2') === true){
 
 
         let orderedName = '';
