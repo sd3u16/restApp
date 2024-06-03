@@ -69,12 +69,13 @@
 
         <div id="card-details" class="hidden">
             <h1 class="details_card">Enter card details</h1>
-            <form action="">
+            <form id="formo" action="">
                 <input type="text" name="name" id="name" placeholder="Enter your name" required>
                 <input type="text" name="card" id="card" placeholder="Enter card number" required>
                 <input type="text" name="cvv" id="cvv" maxlength="3" placeholder="Enter CVV" required>
+                <input type="submit" id="pay_btn" class="pay" value="Pay">
             </form>
-            <button id="pay_btn" class="pay">Pay</button>
+            <!--<button id="pay_btn" class="pay">Pay</button>-->
         </div>
 
 
@@ -84,7 +85,6 @@
     
     </div>
 
-    <script src="./data.js" type="module"></script>
+    <script src="./data.js"></script>
 </body>
 </html>
-
