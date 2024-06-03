@@ -24,7 +24,7 @@ const menuArray = [
 
 var totalPrice = 0;
 
-document.addEventListener('click', (e)=>{
+document.addEventListener('click', function evo(e){
     if(e.target.dataset.id){
 
 
@@ -93,7 +93,7 @@ document.addEventListener('click', (e)=>{
 
         
         document.getElementById('ordero').classList.remove('hidden');
-
+        this.removeEventListener("click", evo);
         
         
        
