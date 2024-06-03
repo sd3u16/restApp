@@ -23,10 +23,10 @@ const menuArray = [
 ]
 
 var totalPrice = 0;
-let coded = false;
+let isFlagged = false;
 
-document.addEventListener('click', function evo(e){
-    if(e.target.dataset.id &&  coded === false){
+document.addEventListener('click',function handler(e){
+    if(e.target.dataset.id && isFlagged === false){
 
 
         let orderedName = '';
@@ -89,13 +89,20 @@ document.addEventListener('click', function evo(e){
         removal.addEventListener('click', ()=>{
             removal.parentElement.parentElement.remove();
             totalPrice -= orderedPrice;
+
+            if(totalPrice <= 0){
+                document.getElementById('ordero').classList.add('hidden');
+            }
             document.getElementById('total').innerHTML = `Total price: <div>$${totalPrice}</div>`;
         })
 
         
-        document.getElementById('ordero').classList.remove('hidden');
+        if(totalPrice > 0){
+            document.getElementById('ordero').classList.remove('hidden');
+        }
         
-        
+        document.removeEventListener('click', handler, true)
+
         
         
        
@@ -107,7 +114,7 @@ document.getElementById('ordero_btn').addEventListener('click',()=>{
 })
 
 
-document.getElementById('pay_btn').addEventListener('click', ()=>{
+document.getElementById('formo').addEventListener('submit', ()=>{
     document.getElementById('card-details').classList.add('hidden');
     document.getElementById('ordero').classList.add('hidden');
 
@@ -116,7 +123,8 @@ document.getElementById('pay_btn').addEventListener('click', ()=>{
     document.getElementById('onWay').textContent = `Thanks, ${valo}! Your order is on its way!`
     document.getElementById('onWay').classList.add('hidden2');
     document.getElementById('onWay').classList.remove('hidden');
-    document.getElementById('ordero').classList.add('hidden');
+    document.body.innerHTML = document.body.innerHTML;
+    isFlagged = true;
     
 })
 
