@@ -93,7 +93,7 @@ document.addEventListener('click', function evo(e){
 
         
         document.getElementById('ordero').classList.remove('hidden');
-        this.removeEventListener("click", evo);
+        
         
         
        
