@@ -26,7 +26,7 @@ var totalPrice = 0;
 let coded = false;
 
 document.addEventListener('click', function evo(e){
-    if(e.target.dataset.id &&  coded===false){
+    if(e.target.dataset.id &&  coded === false){
 
 
         let orderedName = '';
