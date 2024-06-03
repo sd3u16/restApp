@@ -94,7 +94,7 @@ document.addEventListener('click', function evo(e){
 
         
         document.getElementById('ordero').classList.remove('hidden');
-        coded = true;
+        
         
         
         
@@ -117,6 +117,7 @@ document.getElementById('pay_btn').addEventListener('click', ()=>{
     document.getElementById('onWay').classList.add('hidden2');
     document.getElementById('onWay').classList.remove('hidden');
     document.getElementById('ordero').classList.add('hidden');
+    coded = true;
 })
 
 /*
