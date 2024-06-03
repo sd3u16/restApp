@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant App</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="header">
+            <h1 class="header__h1">Stefan's Diner</h1>
+            <p class="header__p">The best burgers and pizzas in town</p>
+        </div>
+
+
+        <div class="item">
+            <div class="item_text">
+                <span class="item_e">🍕</span>
+                <div class="text">
+                    <h1 class="text_food">Pizza</h1>
+                    <p class="text_ing">Pepperoni, mushroom, mozarella</p>
+                    <p class="text_price">&#36;14 </p>
+                </div>
+            </div>
+            <div class="plus" data-id="0">&#43;</div>
+        </div>
+        <div class="item">
+            
+            <div class="item_text">
+                <span class="item_e">🍔</span>
+                <div class="text">
+                    <h1 class="text_food">Hamburger</h1>
+                    <p class="text_ing">beef, cheese, lettuce</p>
+                    <p class="text_price">&#36;12</p>
+                </div>
+            </div>
+            <div class="plus" data-id="1">&#43;</div>
+        </div>
+        <div class="item">
+            <div class="item_text">
+                <span class="item_e">🍺</span>
+                <div class="text">
+                    <h1 class="text_food">Beer</h1>
+                    <p class="text_ing">grain, hops, yeast, water</p>
+                    <p class="text_price">&#36;12</p>
+                </div>
+            </div>
+            <div class="plus" data-id="2">&#43;</div>
+        </div>
+
+
+        <div id="ordero" class="order hidden">
+            <h1 class="order_h1">Your order</h1>
+            <div id="productos" class="products">
+                <!--<div id="poro" class="product_remove">-->
+                   <!-- <p class="product_inge"></p>-->
+                    <!--<p class="product_removal">Remove</p>-->
+                <!--</div>-->
+                <!--<p class="pricey"></p>-->
+            </div>
+            <div id="total" class="total">
+                <p class="totale">Total price:</p>
+                <!--<p class="pricey_total"></p>-->
+            </div>
+            <button id="ordero_btn" class="order_btn">Complete order</button>
+        </div>
+
+        <div id="card-details" class="hidden">
+            <h1 class="details_card">Enter card details</h1>
+            <form action="">
+                <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                <input type="text" name="card" id="card" placeholder="Enter card number" required>
+                <input type="text" name="cvv" id="cvv" maxlength="3" placeholder="Enter CVV" required>
+            </form>
+            <button id="pay_btn" class="pay">Pay</button>
+        </div>
+
+
+        <div id="onWay" class="onWay hidden">
+
+        </div>
+    
+    </div>
+
+    <script src="./data.js"></script>
+</body>
+</html>
+
